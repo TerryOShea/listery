@@ -6,7 +6,11 @@ var Users = require('../models/user'),
 module.exports = (app, passport) => {
     app.get('/', isLoggedIn, (req, res) => {
         let randTasks = ["fold laundry", "jury duty", "feed turtle", "buy lotion", "slay creature", "find keys", 
-        "call grandmother", "discover self", "dentist's appt.", "promulgate notion", "make", "write list"]
+        "call Mother", "discover self", "dentist's appt.", "promulgate notion", "make. do. be.", "write list", 
+        "get a job", "comb long, pearly blonde hair", "adopt stratagem", "monetize", "digitize", "capture zeitgeist", 
+        "craft acerbic comeback", "make trenchant comment", "build yurt", "water ficus", "buy cabbage", "avoid void", 
+        "rent miniskirt", "ford fjord", "walk dog", "stretch", "remember the thing", "balance checkbook", "appreciate nature", 
+        "nurture progeny"];
         res.render('pages/index', { title: 'Home', listTitle: "list #1", entries: [randTasks[Math.floor(Math.random()*randTasks.length)]] });
     });
     
