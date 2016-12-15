@@ -1,0 +1,91 @@
+button { 
+    border: 0; 
+    background: transparent;
+}
+
+button:hover { cursor: pointer; }
+
+div:focus, h1:focus, button:focus { outline: 0; }
+
+.header-title {
+    color: #f26b88;
+    font: 40px 'Reem Kufi', sans-serif;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.list-title-box {
+    background: #f26b88;
+    color: #fff;
+    height: 50px;
+    font: 14px 'Reem Kufi', sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.list-title { padding: 0 10px; }
+
+.delete-all-entries-btn {
+    position: absolute;
+    right: 15px;
+    background: transparent;
+    color: #fff;
+}
+
+.delete-all-entries-btn:hover {
+    cursor: pointer;
+    color: lightgray;
+}
+
+.list-box {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.entry, .new-entry {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    position: relative;
+    align-items: center;
+    padding-left: 40px;
+    background: #f6f6f6;
+}
+
+.new-entry { border-top: 2px solid #cecece; }
+
+.entry-content, .new-entry-content {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+}
+
+.new-entry-content { color: gray; }
+
+.new-entry-content:empty:not(:focus)::before {
+    content: attr(data-ph);
+    font-style: italic;
+}
+
+.new-entry-content:hover { cursor: text; }
+
+.delete-entry-btn, .add-entry-btn {
+    position: absolute;
+    left: 15px;
+}
+
+.delete-entry-btn:hover, .add-entry-btn:hover { color: #f26b88; }
