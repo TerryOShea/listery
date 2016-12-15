@@ -18,6 +18,7 @@ mongoose.connect(process.env.MLAB_URI, (err) => {
     if (err) return console.log(err);
     else console.log("Connected to the database.");
     
+    app.use(favicon(process.cwd() + '/favicon.png'));
     app.set('view engine', 'ejs');
     app.use('/views', express.static(process.cwd() + '/views'));
     app.use(bodyParser.urlencoded({ extended: true }));

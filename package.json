@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test", 
+    "start": "node server/server.js"
   },
   "author": "Terry O'Shea <terrykoshea@gmail.com>",
   "license": "ISC",
