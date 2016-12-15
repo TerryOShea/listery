@@ -1,4 +1,23 @@
 <div class='page-container'>
     <header>
-        <h1 class='header-title'>listery</h1>
+        <form action='/' method='GET'>
+            <button type='submit' class='header-title'>listery</button>
+        </form>
+        <div class='header-btn-box'>
+            <% if (locals.user) { %>
+            <form action='/logout' method='GET'>
+                <button type='submit' title='Log out' class='header-btn logout-btn'>log out</button>
+            </form>
+            <form action='/mylists' method='GET'>
+                <button type='submit' title='My lists' class='header-btn mylists-btn'>my lists</button>
+            </form>
+            <% } else { %>
+            <form action='/login' method='GET'>
+                <button type='submit' title="Log in" class='header-btn login-btn'>log in</button>
+            </form>
+            <form action='/signup' method='GET'>
+                <button type='submit' title='Sign up' class='header-btn signup-btn'>sign up</button>
+            </form>
+            <% } %>
+        </div>
     </header>

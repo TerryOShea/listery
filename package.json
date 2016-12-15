@@ -7,12 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "grunt test", 
+    "test": "grunt test",
     "start": "node server/server.js"
   },
   "author": "Terry O'Shea <terrykoshea@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "connect-flash": "^0.1.1",
     "dotenv": "^2.0.0",
@@ -22,6 +23,8 @@
     "mongodb": "^2.2.15",
     "mongoose": "^4.7.2",
     "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "serve-favicon": "^2.3.2"
   },
   "devDependencies": {

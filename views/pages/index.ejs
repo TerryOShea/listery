@@ -4,14 +4,14 @@
     <% include ../partials/header %>
     <div class="list-box">
         <div class='list-title-box'>
-            <h1 class="list-title" contenteditable="true"><%= list.title %></h1>
+            <h1 class="list-title" contenteditable="true"><%= listTitle %></h1>
             <button class='delete-all-entries-btn'><i class="fa fa-lg fa-trash-o"></i></button>
         </div>
         <div class="list-entry-box">
-            <% for (var i = 0; i < list.entries.length; i++) { %>
+            <% for (var i = 0; i < entries.length; i++) { %>
             <div class="entry" id="<%= i %>">
                 <button type="button" class="delete-entry-btn"><i class="fa fa-close"></i></button>
-                <div class="entry-content" contenteditable="true"><%= list.entries[i].item %></div>
+                <div class="entry-content" contenteditable="true"><%= entries[i] %></div>
             </div>
             <% } %>
         </div>
@@ -21,7 +21,7 @@
         </div>
     </div>
     <script>
-        var count = <%= list.entries.length %>;
+        var count = <%= entries.length %>;
     </script>
     <% include ../partials/footer %>
 </body>

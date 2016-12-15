@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<% include ../partials/head %>
+<body>
+    <% include ../partials/header %>
+    <h4 class='form-title'>sign up</h4>
+    <form action='/signup' method='POST' class='form-box'>
+        <input type='text' name='firstname' class='form-input' placeholder='first name' title='First name' required autofocus>
+        <input type='text' name='lastname' class='form-input' placeholder='last name' title='Last name' required>
+        <input type='email' name='email' class='form-input' placeholder='email address' title='Email address' required>
+        <input type='password' name='password' class='form-input' placeholder='password (6+ characters)' 
+        title='Password (6 or more characters)' required>
+        <button type='submit' title='Submit'>submit</button>
+    </form>
+    <% include ../partials/footer %>
+</body>
