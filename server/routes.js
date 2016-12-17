@@ -39,10 +39,15 @@ module.exports = (app, passport) => {
         failureFlash: true
     }));
     
-    app.post('/logout');
+    app.get('/logout', mustBeLoggedIn, (req, res) => {
+        req.logout();
+        res.redirect('/');
+    });
     
     // fix so that others can see mylists and has unique identifier
-    app.get('/mylists/');
+    app.get('/mylists/', mustBeLoggedIn, (req, res) => {
+        res.render('pages/mylists', { message: req.flash('mylistsMessage'), title: 'My list' });
+    });
     app.get('/list/:id');
     app.post('/list/:id');
 };

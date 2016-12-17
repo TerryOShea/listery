@@ -49,7 +49,7 @@ module.exports = (passport) => {
                 if (err) return done(err); 
                 if (!user) return done(null, false, req.flash('signinMessage', 
                     'We couldn\'t find that email address—are you sure you\'re registered?')); 
-                if (!user.validPassword(password, user.local.password)) return done(null, false, req.flash('signinMessage', 'That password is incorrect!')); 
+                if (!user.validPassword(password, user.password)) return done(null, false, req.flash('signinMessage', 'That password is incorrect!')); 
                 return done(null, user);
             }); 
         }); 

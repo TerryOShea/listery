@@ -39,7 +39,7 @@ header {
     margin-left: 5px;
 }
 
-.login-btn, .logout {
+.login-btn, .logout-btn {
     color: #f26b88;
     text-decoration: underline;
 }
@@ -128,15 +128,43 @@ footer {
 .delete-entry-btn, .add-entry-btn {
     position: absolute;
     left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .delete-entry-btn:hover, .add-entry-btn:hover { color: #f26b88; }
 
 
 
+
+.form-title {
+    font-style: italic;
+    font-size: 24px;
+    line-height: 0px;
+}
+
 .form-box {
-    background: lightgray;
-    width: 80%;
+    width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+.form-input {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.form-submit-btn {
+    background: #f26b88;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+    .form-box {
+        width: 80%;
+    }
 }
